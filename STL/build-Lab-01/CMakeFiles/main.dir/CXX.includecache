@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/workspaces/codespace/cis202/STL/Lab-01/ListItem.cpp
+ListItem.h
+/workspaces/codespace/cis202/STL/Lab-01/ListItem.h
+iostream
+-
+
+/workspaces/codespace/cis202/STL/Lab-01/ListItem.h
+string
+-
+
+/workspaces/codespace/cis202/STL/Lab-01/main.cpp
+ListItem.h
+/workspaces/codespace/cis202/STL/Lab-01/ListItem.h
+string
+-
+list
+-
+iostream
+-
+

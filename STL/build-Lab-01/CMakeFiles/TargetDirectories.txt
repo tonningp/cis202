@@ -1,0 +1,3 @@
+/workspaces/codespace/cis202/STL/build-Lab-01/CMakeFiles/rebuild_cache.dir
+/workspaces/codespace/cis202/STL/build-Lab-01/CMakeFiles/edit_cache.dir
+/workspaces/codespace/cis202/STL/build-Lab-01/CMakeFiles/main.dir
