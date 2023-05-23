@@ -1,4 +1,5 @@
 #ifndef TREE_H
+#define TREE_H
 
 #include <vector>
 #include <string>
@@ -34,7 +35,7 @@ public:
       Constructs a tree with one node and no children.
       @param root_data the data for the root
    */
-   Tree(string root_data);
+   Tree(const string &root_data);
 
    /**
       Adds a subtree as the last child of the root.

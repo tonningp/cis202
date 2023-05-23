@@ -1,11 +1,12 @@
 #include "tree.h"
+#include <iostream>
 
 Tree::Tree()
 {
    root = nullptr;
 }
 
-Tree::Tree(string root_data)
+Tree::Tree(const string &root_data)
 {
    root = new Node;
    root->data = root_data;
@@ -25,7 +26,9 @@ int Tree::size() const
 int Node::size() const
 {
    int sum = 0;
-   for (Node* child : children) { sum = sum + child->size(); }
+   for (Node* child : children) { 
+	   sum = sum + child->size(); 
+   }
    return 1 + sum;
 }
 
