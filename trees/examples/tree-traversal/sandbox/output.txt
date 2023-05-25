@@ -1,0 +1,5 @@
+Preorder: 1 2 5 6 7 3 8 9 4 10 11 
+Short names: 11
+Postorder: 5 6 7 2 8 9 3 10 11 4 1 
+Breadth first: 1 2 3 4 5 6 7 8 9 10 11 
+Short names: 11

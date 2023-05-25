@@ -1,4 +1,0 @@
-Size: Node::size = 1
-Node::size = 2
-Node::size = 3
-4

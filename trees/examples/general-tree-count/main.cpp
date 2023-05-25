@@ -13,6 +13,8 @@ int main()
    t1.add_subtree(t3);
    Tree t4("Savannah");
    t2.add_subtree(t4);
+   Tree t5("Joe");
+   t1.add_subtree(t5);
    cout << "Size: " << t1.size() << endl;
    return 0;
 }

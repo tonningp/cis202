@@ -1,0 +1,5 @@
+Preorder: Anne Peter Savannah Zara 
+Short names: 3
+Postorder: Savannah Peter Zara Anne 
+Breadth first: Anne Peter Zara Savannah 
+Short names: 3
