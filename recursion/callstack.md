@@ -1,0 +1,279 @@
+````markdown
+# Recursion Call-Stack Visualization Worksheet (C++)
+
+Name: ____________________________  
+Course / Section: ________________  
+Date: ____________________________
+
+---
+
+## Instructions
+
+For each problem:
+
+1. Trace every recursive function call.  
+2. Draw the call stack as the program runs.  
+3. Record:
+   - Function arguments  
+   - Return values  
+   - Output (if any)  
+4. Pay close attention to:
+   - When base cases are reached  
+   - The order in which calls return (stack unwinding)  
+
+---
+
+# Part 1: Understanding Call Order
+
+## Problem 1: Simple Countdown
+
+```cpp
+void countdown(int n) {
+    if (n == 0) {
+        cout << "Done" << endl;
+        return;
+    }
+    cout << n << endl;
+    countdown(n - 1);
+}
+````
+
+### Function Call
+
+```cpp
+countdown(3);
+```
+
+### Output (fill in)
+
+```
+________
+________
+________
+________
+```
+
+### Call Stack Trace (Fill In)
+
+| Stack Level (Top → Bottom) | Function Call |
+| -------------------------- | ------------- |
+|                            |               |
+|                            |               |
+|                            |               |
+|                            |               |
+|                            | `main()`      |
+
+### Reflection Questions
+
+1. How many times is `countdown()` called?
+
+   ---
+
+2. Which call prints `"Done"`?
+
+   ---
+
+---
+
+# Part 2: Return Values and Stack Unwinding
+
+## Problem 2: Factorial
+
+```cpp
+int factorial(int n) {
+    if (n == 0)
+        return 1;
+    return n * factorial(n - 1);
+}
+```
+
+### Function Call
+
+```cpp
+int result = factorial(3);
+```
+
+### Call Stack at Maximum Depth
+
+| Stack Level (Top → Bottom) | Function Call | Waiting For |
+| -------------------------- | ------------- | ----------- |
+|                            |               |             |
+|                            |               |             |
+|                            |               |             |
+|                            |               |             |
+|                            | `main()`      |             |
+
+### Return Trace (Fill In)
+
+| Returning From | Returned Value |
+| -------------- | -------------- |
+| `factorial(0)` | ______________ |
+| `factorial(1)` | ______________ |
+| `factorial(2)` | ______________ |
+| `factorial(3)` | ______________ |
+
+### Final Result
+
+```
+result = ____________________
+```
+
+---
+
+# Part 3: Output Before and After Recursion
+
+## Problem 3: Number Pattern
+
+```cpp
+void pattern(int n) {
+    if (n == 0)
+        return;
+
+    cout << n << " ";
+    pattern(n - 1);
+    cout << n << " ";
+}
+```
+
+### Function Call
+
+```cpp
+pattern(3);
+```
+
+### Output (Write exactly what prints)
+
+```
+____________________________________________________
+```
+
+### Call Stack Visualization
+
+| Step | Action                     |
+| ---- | -------------------------- |
+| 1    | `pattern(3)` prints ______ |
+| 2    | `pattern(2)` prints ______ |
+| 3    | `pattern(1)` prints ______ |
+| 4    | `pattern(0)` returns       |
+| 5    | `pattern(1)` prints ______ |
+| 6    | `pattern(2)` prints ______ |
+| 7    | `pattern(3)` prints ______ |
+
+---
+
+# Part 4: Multiple Recursive Calls
+
+## Problem 4: Fibonacci
+
+```cpp
+int fib(int n) {
+    if (n <= 1)
+        return n;
+    return fib(n - 1) + fib(n - 2);
+}
+```
+
+### Function Call
+
+```cpp
+fib(4);
+```
+
+### Recursive Call Tree (Complete the diagram)
+
+```
+                fib(4)
+            _____/     \_____
+           /                   \
+       fib(3)                 fib(2)
+      ______\_____            ___\___
+     /             \          /       \
+ fib(2)         fib(1)     fib(1)   fib(0)
+ ___\___
+/       \
+fib(1)  fib(0)
+```
+
+(Write return values next to each call.)
+
+---
+
+### Total Function Calls
+
+```
+fib() was called __________ times.
+```
+
+---
+
+# Part 5: Linked List Recursion
+
+## Problem 5: Output a Linked List
+
+```cpp
+struct Node {
+    int data;
+    Node* next;
+};
+
+void printList(Node* head) {
+    if (head == nullptr)
+        return;
+
+    cout << head->data << " ";
+    printList(head->next);
+}
+```
+
+### List Structure
+
+```
+[10] → [20] → [30] → nullptr
+```
+
+### Call Stack Trace
+
+| Stack Level (Top → Bottom) | head->data |
+| -------------------------- | ---------- |
+|                            |            |
+|                            |            |
+|                            |            |
+|                            |            |
+|                            | `main()`   |
+
+### Output
+
+```
+____________________________________________________
+```
+
+---
+
+# Final Reflection (Answer in Complete Sentences)
+
+1. Why must every recursive function have a base case?
+
+   ---
+
+   ---
+
+2. What happens in memory when recursion goes too deep?
+
+   ---
+
+   ---
+
+3. When is recursion a better choice than loops?
+
+   ---
+
+   ---
+
+---
+
+# Instructor Notes (Optional)
+
+If you cannot explain recursion using a call stack, you do not yet understand recursion.
+
+```
+```
