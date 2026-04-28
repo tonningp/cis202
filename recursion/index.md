@@ -1,4 +1,4 @@
-# Chapter 6: Recursion in C++ (Lecture Notes)
+# Chapter 6: Recursion in C++
 
 These notes introduce recursion in C++ with clear explanations, examples, and lab-aligned applications.
 
